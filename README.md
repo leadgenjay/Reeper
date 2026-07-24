@@ -70,6 +70,29 @@ Then invoke:
 /reeper:import <repo-url> [goal]
 ```
 
+## Install as a single Agent Skill
+
+Reeper also ships as one flattened Agent Skill for people who install skills rather than plugins:
+
+```bash
+curl -sL 'https://leadgenjay.com/api/skills/install.sh?items=reeper' | bash
+```
+
+That form is a build artifact, not a second source of truth. Regenerate it with:
+
+```bash
+make export     # -> dist/claude-skills/skills/reeper/
+```
+
+The plugin lays its skills out as `plugins/reeper/skills/<name>/SKILL.md` and reaches the shared
+guides with `${CLAUDE_SKILL_DIR}/../../references/...`. That climb is correct inside a plugin and
+wrong for a skill install, where every file lands in one directory, so `scripts/export_marketplace_skill.py`
+rewrites the paths, strips the per-skill frontmatter into `workflows/*.md`, and renders the router
+`SKILL.md` plus `manifest.yaml` from `marketplace/`. `tests/test_marketplace_export.py` fails the
+build if any emitted file escapes the skill root or points at a path that does not exist.
+
+The plugin form remains the richer install: namespaced commands and automatically registered subagents.
+
 ## Test locally
 
 From Claude Code:
