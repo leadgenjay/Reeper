@@ -20,6 +20,27 @@ Core principles:
 
 ## Commands
 
+### `/reeper`
+
+A single entry point that routes to the workflow below and works against either install form.
+
+```text
+/reeper https://github.com/example/source-repo  Bring its analytics dashboard into this app
+/reeper resume
+/reeper skillify .  Create a user-invoked command that audits our lead import pipeline
+```
+
+Plugin commands are namespaced (`/reeper:import`), so the bare `/reeper` is a separate one-file
+command. Claude Code resolves a top-level command only from `~/.claude/commands/<name>.md`:
+
+```bash
+curl -sL https://raw.githubusercontent.com/leadgenjay/Reeper/main/commands/reeper.md \
+  -o ~/.claude/commands/reeper.md
+```
+
+It prefers the plugin install when both are present, because the plugin also registers the
+read-only subagents. With neither installed it prints both install commands and stops.
+
 ### `/reeper:import`
 
 Import or adapt a repository into the current project.

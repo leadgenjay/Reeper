@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added the top-level `/reeper` command (`commands/reeper.md`), which routes to import, resume, or
+  skillify and resolves either the plugin or the single-skill install, preferring the plugin
 - Added `make export` (`scripts/export_marketplace_skill.py`), which builds the flattened
   single-skill distribution at `dist/claude-skills/skills/reeper/` from the plugin source
 - Added the authored router `marketplace/SKILL.md` and `marketplace/manifest.yaml`
