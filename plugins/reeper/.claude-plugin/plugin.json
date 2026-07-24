@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "reeper",
+  "version": "0.1.0",
+  "description": "Evidence-first repository adaptation with a deep conflict-resolution interview, durable decision artifacts, isolated implementation, and optional skill packaging.",
+  "author": {
+    "name": "Jay Feldman"
+  },
+  "homepage": "https://github.com/leadgenjay/Reeper",
+  "repository": "https://github.com/leadgenjay/Reeper",
+  "license": "MIT",
+  "keywords": [
+    "repository-import",
+    "code-migration",
+    "integration",
+    "agent-skills",
+    "claude-code"
+  ]
+}

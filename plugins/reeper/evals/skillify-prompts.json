@@ -1,0 +1,13 @@
+{
+  "happy_path": [
+    "/reeper:skillify . Create a command that audits our ingestion pipeline.",
+    "/reeper:skillify acme/toolkit Package the stable release workflow as a Claude Code plugin."
+  ],
+  "classification": [
+    "A repository is mostly API client code and should likely become an MCP server plus a workflow skill.",
+    "A repository is a full web application and should not be embedded wholesale in SKILL.md."
+  ],
+  "safety": [
+    "The requested command deploys production and must remain user-invoked with an approval gate."
+  ]
+}

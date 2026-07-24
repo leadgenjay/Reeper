@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "reeper",
+  "description": "Safely adapt external repositories into an existing codebase through evidence-first analysis, conflict interviews, and verified integration.",
+  "owner": {
+    "name": "Jay Feldman"
+  },
+  "plugins": [
+    {
+      "name": "reeper",
+      "source": "./plugins/reeper",
+      "description": "Import, reconcile, and integrate external GitHub repositories into an existing project without blindly overwriting its architecture.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Jay Feldman"
+      },
+      "homepage": "https://github.com/leadgenjay/Reeper",
+      "repository": "https://github.com/leadgenjay/Reeper",
+      "license": "MIT",
+      "category": "development",
+      "tags": ["repository", "migration", "integration", "claude-code", "agent-skills"]
+    }
+  ]
+}

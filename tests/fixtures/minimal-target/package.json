@@ -1,0 +1,18 @@
+{
+  "name": "minimal-target",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "test": "vitest",
+    "postinstall": "echo should-not-run"
+  },
+  "dependencies": {
+    "next": "16.0.0",
+    "react": "19.0.0",
+    "@supabase/supabase-js": "2.0.0",
+    "stripe": "20.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "4.0.0"
+  }
+}
